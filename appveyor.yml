@@ -6,8 +6,6 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install -c conda-forge conda-pack
-  - conda init powershell
-  - conda init cmd.exe
   - conda env create -f environment.yml
   - "conda pack -n conda-pack-build -o packed-env.tar.gz"
   - 7z a packed-env.tar.gz.xz packed-env.tar.gz
