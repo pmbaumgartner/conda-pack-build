@@ -1,0 +1,11 @@
+name: conda-pack-build
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.7
+  - sentence-transformers
+  - torchvision
+  - torchaudio
+  - pytorch

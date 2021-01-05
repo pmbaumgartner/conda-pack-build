@@ -6,19 +6,14 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install -c conda-forge conda-pack
-  - "conda create -n conda-pack-build python=3.7"
   - conda init powershell
   - conda init cmd.exe
-  - conda activate conda-pack-build
-  - conda config --append channels conda-forge
-  - conda config --append channels pytorch
-  - conda install pytorch torchvision torchaudio cpuonly -c pytorch
-  - conda install -c conda-forge sentence-transformers
-  - conda activate base
+  - conda env create -f environment.yml
   - "conda pack -n conda-pack-build -o packed-env.tar.gz"
+  - 7z a packed-env.tar.gz.xz packed-env.tar.gz
 
 artifacts:
-  - path: packed-env.tar.gz
+  - path: packed-env.tar.gz.xz
     name: Packed Environment
 # test_script:
 #   - cmd: conda help
