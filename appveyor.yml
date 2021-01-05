@@ -5,14 +5,13 @@ install:
   - set PATH=C:\Miniconda3;C:\Miniconda3\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
-  - conda info -a
   - conda install -c conda-forge conda-pack
-  - conda env create -n conda-pack-build python=3.7
+  - "conda env create -n conda-pack-build python=3.7"
   - conda activate conda-pack-build
   - conda install -c conda-forge sentence-transformers
   - conda install pytorch torchvision torchaudio cpuonly -c pytorch
   - conda activate base
-  - conda pack -n conda-pack-build -o packed-env.tar.gz
+  - "conda pack -n conda-pack-build -o packed-env.tar.gz"
 
 artifacts:
   - path: packed-env.tar.gz
