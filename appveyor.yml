@@ -10,8 +10,8 @@ install:
   - conda init powershell
   - conda init cmd.exe
   - conda activate conda-pack-build
-  - conda install -c conda-forge sentence-transformers
   - conda install pytorch torchvision torchaudio cpuonly -c pytorch
+  - conda install -c conda-forge sentence-transformers
   - conda activate base
   - "conda pack -n conda-pack-build -o packed-env.tar.gz"
 
