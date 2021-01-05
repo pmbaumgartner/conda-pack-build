@@ -3,3 +3,5 @@ build: off
 
 test_script:
   - cmd: ECHO this is batch
+  - ps: (new-object net.webclient).DownloadFile('https://repo.anaconda.com/archive/Anaconda3-2020.11-Windows-x86_64.exe', 'Anaconda3-2020.11-Windows-x86_64.exe')
+  - ps: start /wait "" Anaconda3-2020.11-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=1 /S /D=%UserProfile%\Anaconda3
