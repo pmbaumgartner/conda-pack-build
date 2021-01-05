@@ -7,11 +7,8 @@ install:
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - "conda pack -n conda-pack-build -o packed-env.tar.gz"
-  - 7z a packed-env.tar.gz.xz packed-env.tar.gz
+  - conda pack -n conda-pack-build -o packed-env.tar.gz
 
 artifacts:
-  - path: packed-env.tar.gz.xz
+  - path: packed-env.tar.gz
     name: Packed Environment
-# test_script:
-#   - cmd: conda help
