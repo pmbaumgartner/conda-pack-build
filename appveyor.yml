@@ -7,6 +7,7 @@ install:
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - "conda create -n conda-pack-build python=3.7"
+  - conda init powershell
   - conda activate conda-pack-build
   - conda install -c conda-forge sentence-transformers
   - conda install pytorch torchvision torchaudio cpuonly -c pytorch
