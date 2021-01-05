@@ -1,0 +1,12 @@
+name: conda-pack-build
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - sentence-transformers
+  - torchvision
+  - torchaudio
+  - pytorch
+prefix: /Users/pbaumgartner/anaconda3/envs/conda-pack-build
+

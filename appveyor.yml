@@ -6,7 +6,12 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - "conda create -q -n test-environment python=%PYTHON_VERSION% numpy scipy nose"
-  - activate test-environment
+  - conda install -c conda-forge conda-pack
+  - conda env create -f environment.yml
+  - conda pack -n conda-pack-build -o packed-env.tar.gz
+
+artifacts:
+  - path: packed-env.tar.gz
+    name: Packed Environment
 # test_script:
 #   - cmd: conda help
