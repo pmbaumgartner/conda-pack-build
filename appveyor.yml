@@ -10,7 +10,7 @@ install:
   - conda env create -n conda-pack-build python=3.7
   - conda activate conda-pack-build
   - conda install -c conda-forge sentence-transformers
-  - conda install pytorch torchvision torchaudio -c pytorch
+  - conda install pytorch torchvision torchaudio cpuonly -c pytorch
   - conda activate base
   - conda pack -n conda-pack-build -o packed-env.tar.gz
 
