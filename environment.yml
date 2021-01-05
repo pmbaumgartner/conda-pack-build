@@ -9,4 +9,5 @@ dependencies:
   - torchaudio
   - pytorch
   - cpuonly
-  - sentence-transformers
+  - sentence-transformers==0.3.9
+  - zarr
