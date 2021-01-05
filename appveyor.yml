@@ -1,3 +1,5 @@
 version: 1.0.{build}
-build:
-  verbosity: minimal
+build: off
+
+test_script:
+  - cmd: ECHO this is batch
