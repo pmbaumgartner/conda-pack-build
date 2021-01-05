@@ -1,8 +1,12 @@
 version: 1.0.{build}
 build: off
 
-test_script:
-  - cmd: ECHO this is batch
-  - ps: (new-object net.webclient).DownloadFile('https://repo.anaconda.com/archive/Anaconda3-2020.11-Windows-x86_64.exe', 'Anaconda3-2020.11-Windows-x86_64.exe')
-  - ps: start /wait "" Anaconda3-2020.11-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=1 /S /D=%UserProfile%\Anaconda3
-  - cmd: conda help
+install:
+  - set PATH=C:\Miniconda3;C:\Miniconda3\Scripts;%PATH%
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+  - "conda create -q -n test-environment python=%PYTHON_VERSION% numpy scipy nose"
+  - activate test-environment
+# test_script:
+#   - cmd: conda help
