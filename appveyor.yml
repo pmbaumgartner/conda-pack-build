@@ -7,7 +7,11 @@ install:
   - conda update -q conda
   - conda info -a
   - conda install -c conda-forge conda-pack
-  - conda env create -f environment.yml
+  - conda env create -n conda-pack-build python=3.7
+  - conda activate conda-pack-build
+  - conda install -c conda-forge sentence-transformers
+  - conda install pytorch torchvision torchaudio -c pytorch
+  - conda activate base
   - conda pack -n conda-pack-build -o packed-env.tar.gz
 
 artifacts:
