@@ -6,7 +6,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install -c conda-forge conda-pack
-  - "conda env create -n conda-pack-build python=3.7"
+  - "conda create -n conda-pack-build python=3.7"
   - conda activate conda-pack-build
   - conda install -c conda-forge sentence-transformers
   - conda install pytorch torchvision torchaudio cpuonly -c pytorch
