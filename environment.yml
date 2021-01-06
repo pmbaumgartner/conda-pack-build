@@ -11,3 +11,10 @@ dependencies:
   - cpuonly
   - sentence-transformers==0.3.9
   - zarr
+  - pandas
+  - openpyxl
+  - xlsxwriter
+  - black
+  - flake8
+  - pip:
+      - pysbd
