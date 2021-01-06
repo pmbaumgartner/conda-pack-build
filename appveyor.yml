@@ -10,8 +10,11 @@ install:
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
+  - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - conda pack -n %CONDA_ENV_NAME% -o %CONDA_ENV_NAME%.tar.gz
 
 artifacts:
   - path: $(CONDA_ENV_NAME).tar.gz
     name: Packed Environment
+  - path: package-list.txt
+    name: Installed Packages (conda list)
