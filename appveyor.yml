@@ -1,14 +1,17 @@
 version: 1.0.{build}
 build: off
 
+environment:
+  CONDA_ENV_NAME: conda-pack-build
+
 install:
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - conda pack -n conda-pack-build -o packed-env.tar.gz
+  - conda pack -n %CONDA_ENV_NAME% -o %CONDA_ENV_NAME%.tar.gz
 
 artifacts:
-  - path: packed-env.tar.gz
+  - path: $(CONDA_ENV_NAME).tar.gz
     name: Packed Environment
