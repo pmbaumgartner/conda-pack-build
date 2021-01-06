@@ -16,6 +16,8 @@ dependencies:
   - xlsxwriter
   - sas7bdat
   - pyarrow
+  - umap-learn
+  - hdbscan
   - black
   - flake8
   - pip
