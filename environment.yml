@@ -14,6 +14,8 @@ dependencies:
   - pandas
   - openpyxl
   - xlsxwriter
+  - sas7bdat
+  - pyarrow
   - black
   - flake8
   - pip
