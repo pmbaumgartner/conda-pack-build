@@ -15,6 +15,7 @@ dependencies:
   - openpyxl
   - xlsxwriter
   - sas7bdat
+  - pyreadstat
   - pyarrow
   - umap-learn
   - hdbscan
