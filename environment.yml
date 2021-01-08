@@ -19,6 +19,7 @@ dependencies:
   - pyarrow
   - umap-learn
   - hdbscan
+  - omegaconf
   - black
   - flake8
   - pip
