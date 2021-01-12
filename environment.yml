@@ -21,6 +21,7 @@ dependencies:
   - pynndescent
   - hdbscan
   - omegaconf
+  - pymssql
   - black
   - flake8
   - pip
