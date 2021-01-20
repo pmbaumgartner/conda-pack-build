@@ -10,7 +10,6 @@ install:
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - conda clean -afy
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - conda pack -n %CONDA_ENV_NAME% -o %CONDA_ENV_NAME%.tar.gz
 
