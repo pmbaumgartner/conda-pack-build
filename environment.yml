@@ -22,6 +22,7 @@ dependencies:
   - hdbscan
   - omegaconf
   - pymssql
+  - loguru
   - black
   - flake8
   - pip
