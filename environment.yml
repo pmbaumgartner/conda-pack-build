@@ -5,26 +5,37 @@ channels:
   - defaults
 dependencies:
   - python=3.7
+  # pytorch for transformers
   - torchvision
   - torchaudio
   - pytorch
   - cpuonly
+  # sentence-transformers for embedding
   - sentence-transformers==0.3.9
-  - zarr
+  # data access / storage
   - pandas
+  - zarr
   - openpyxl
   - xlsxwriter
   - sas7bdat
-  - pyreadstat
+  - pymssql
   - pyarrow
+  # visualization
+  - matplotlib
+  - altair
+  - altair_viewer
+  - vega
+  # analysis + ML
   - umap-learn
   - pynndescent
   - hdbscan
+  # logging + configuration + admin
   - omegaconf
-  - pymssql
   - loguru
+  # code quality helpers
   - black
   - flake8
+  # PIP installs
   - pip
   - pip:
       - pysbd
