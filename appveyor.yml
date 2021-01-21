@@ -11,7 +11,7 @@ install:
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
-  - conda pack -n %CONDA_ENV_NAME% -o %CONDA_ENV_NAME%.tar.gz
+  - conda pack --compress-level 9 --n-threads -1 --exclude "*.pyc" --exclude "*.pyx" --name %CONDA_ENV_NAME% --output %CONDA_ENV_NAME%.tar.gz
 
 artifacts:
   - path: $(CONDA_ENV_NAME).tar.gz
