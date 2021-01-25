@@ -6,8 +6,6 @@ channels:
 dependencies:
   - python=3.7
   # pytorch for transformers
-  - torchvision
-  - torchaudio
   - pytorch
   - cpuonly
   # sentence-transformers for embedding
@@ -19,7 +17,7 @@ dependencies:
   - xlsxwriter
   - sas7bdat
   - pymssql
-  - pyarrow
+  - fastparquet
   - tabulate
   # visualization
   - matplotlib
