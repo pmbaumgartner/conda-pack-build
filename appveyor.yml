@@ -35,6 +35,6 @@ artifacts:
     name: Installed Packages (conda list)
 
 cache:
-  - C:\Miniconda3-x64\pkgs\mkl*
-  - C:\Miniconda3-x64\pkgs\qt*
-  - C:\Miniconda3-x64\pkgs\pytorch*
+  - C:\Miniconda3-x64\pkgs\mkl**
+  - C:\Miniconda3-x64\pkgs\qt**
+  - C:\Miniconda3-x64\pkgs\pytorch**
