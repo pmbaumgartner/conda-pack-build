@@ -16,8 +16,16 @@ build_script:
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
-  - conda pack --n-threads -1 --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map" --name %CONDA_ENV_NAME% --output %CONDA_ENV_NAME%.tar
-  - 7z a %CONDA_ENV_NAME%.7z -m0=bcj -m1=zstd -mx11 -mmt=4 %CONDA_ENV_NAME%.tar
+  - >-
+    conda pack --n-threads -1
+    --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map"
+    --name %CONDA_ENV_NAME%
+    --output %CONDA_ENV_NAME%.tar
+  - >-
+    7z a %CONDA_ENV_NAME%.7z
+    -m0=bcj -m1=zstd -mmt=4
+    -mx13
+    %CONDA_ENV_NAME%.tar
 
 artifacts:
   - path: $(CONDA_ENV_NAME).7z
