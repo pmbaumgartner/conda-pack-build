@@ -11,7 +11,7 @@ install:
   - 7z x Codecs.7z -o"C:\Program Files\7-Zip\Codecs"
   - conda install anaconda-clean -y
   - anaconda-clean --yes
-  - C:\Miniconda3-x64\Uninstall-Miniconda3.exe
+  - C:\Miniconda3-x64\Uninstall-Miniconda3.exe /S
 
 build_script:
   - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
