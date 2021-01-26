@@ -14,8 +14,8 @@ build_script:
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
-  - conda install -c conda-forge conda-pack
-  - conda env create -f environment.yml
+  - conda install -c conda-forge conda-pack mamba
+  - mamba env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
     conda pack --n-threads -1
@@ -33,8 +33,3 @@ artifacts:
     name: Packed Environment
   - path: package-list.txt
     name: Installed Packages (conda list)
-
-cache:
-  - C:\Miniconda3-x64\pkgs\mkl**
-  - C:\Miniconda3-x64\pkgs\qt**
-  - C:\Miniconda3-x64\pkgs\pytorch**
