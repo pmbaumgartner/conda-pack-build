@@ -10,11 +10,6 @@ install:
   - ps: .\install_miniconda.ps1
   - ps: Start-FileDownload 'https://github.com/mcmilk/7-Zip-zstd/releases/download/19.00-v1.4.8-R1/Codecs.7z'
   - 7z x Codecs.7z -o"C:\Program Files\7-Zip\Codecs"
-  - conda install anaconda-clean -y
-  - anaconda-clean --yes
-  - C:\Miniconda3-x64\Uninstall-Miniconda3.exe /S
-  - ps: Start-FileDownload 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe'
-  - start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniconda3-x64
 
 build_script:
   - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
