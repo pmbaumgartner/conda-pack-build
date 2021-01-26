@@ -1,6 +1,5 @@
 version: 1.0.{build}
 build: off
-image: Visual Studio 2017
 
 environment:
   CONDA_ENV_NAME: conda-pack-build
