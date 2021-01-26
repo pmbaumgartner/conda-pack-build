@@ -40,4 +40,4 @@ dependencies:
   - pip
   - pip:
       - pysbd
-      - onnxruntime
+      # - onnxruntime
