@@ -10,7 +10,6 @@ install:
   - 7z i
 
 build_script:
-  - 7z i
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
@@ -18,7 +17,7 @@ build_script:
   - conda env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - conda pack --n-threads -1 --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map" --name %CONDA_ENV_NAME% --output %CONDA_ENV_NAME%.tar
-  - 7z a %CONDA_ENV_NAME%.7z -m0=bcj -m1=zstd -mx11 %CONDA_ENV_NAME%.tar
+  - 7z a %CONDA_ENV_NAME%.7z -m0=bcj -m1=zstd -mx11 -mmt=4 %CONDA_ENV_NAME%.tar
 
 artifacts:
   - path: $(CONDA_ENV_NAME).7z
