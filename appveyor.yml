@@ -9,13 +9,13 @@ install:
   - set PATH=C:\Miniconda37-x64;C:\Miniconda37-x64\Scripts;C:\Miniconda37-x64\Library\bin;%PATH%
   - ps: Start-FileDownload 'https://github.com/mcmilk/7-Zip-zstd/releases/download/19.00-v1.4.8-R1/Codecs.7z'
   - 7z x Codecs.7z -o"C:\Program Files\7-Zip\Codecs"
-  - conda install -c conda-forge mamba==0.7.1 -y
+  - conda install -c conda-forge mamba==0.7.1
 
 build_script:
   - conda config --set always_yes yes --set changeps1 no
   - mamba update -q conda
   - mamba install -c conda-forge conda-pack
-  - mamba env create -f environment.yml
+  - conda env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
     conda pack --n-threads -1
