@@ -7,37 +7,37 @@ dependencies:
   - python=3.7
   # pytorch for transformers
   - pytorch
-  - cpuonly
-  # sentence-transformers for embedding
-  - sentence-transformers==0.3.9
-  # data access / storage
-  - pandas
-  - zarr
-  - openpyxl
-  - xlsxwriter
-  - sas7bdat
-  - pymssql
-  - fastparquet
-  - tabulate
-  # visualization
-  - matplotlib
-  - altair
-  - altair_viewer
-  - altair_saver
-  - vega
-  # analysis + ML
-  - umap-learn
-  - pynndescent
-  - hdbscan
-  # logging + configuration + admin
-  - omegaconf
-  - loguru
-  - python-dotenv
-  # code quality helpers
-  - black
-  - flake8
-  # PIP installs
-  - pip
-  - pip:
-      - pysbd
-      # - onnxruntime
+  # - cpuonly
+  # # sentence-transformers for embedding
+  # - sentence-transformers==0.3.9
+  # # data access / storage
+  # - pandas
+  # - zarr
+  # - openpyxl
+  # - xlsxwriter
+  # - sas7bdat
+  # - pymssql
+  # - fastparquet
+  # - tabulate
+  # # visualization
+  # - matplotlib
+  # - altair
+  # - altair_viewer
+  # - altair_saver
+  # - vega
+  # # analysis + ML
+  # - umap-learn
+  # - pynndescent
+  # - hdbscan
+  # # logging + configuration + admin
+  # - omegaconf
+  # - loguru
+  # - python-dotenv
+  # # code quality helpers
+  # - black
+  # - flake8
+  # # PIP installs
+  # - pip
+  # - pip:
+  #     - pysbd
+  #     # - onnxruntime

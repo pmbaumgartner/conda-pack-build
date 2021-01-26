@@ -3,19 +3,25 @@ build: off
 
 environment:
   CONDA_ENV_NAME: conda-pack-build
+  7ZIP_PATH: C:\Program Files\7-Zip\
 
 install:
-  - where 7z
+  - ps: Start-FileDownload 'https://github.com/mcmilk/7-Zip-zstd/releases/download/19.00-v1.4.8-R1/Codecs.7z'
+  - 7z x Codecs.7z %7ZIP_PATH%\Codecs
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda install -c conda-forge conda-pack
   - conda env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
-  - conda pack --compress-level 9 --n-threads -1 --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map" --name %CONDA_ENV_NAME% --output %CONDA_ENV_NAME%.tar.gz
+  - conda pack --n-threads -1 --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map" --name %CONDA_ENV_NAME% --output %CONDA_ENV_NAME%.tar
+  - 7z a %CONDA_ENV_NAME%.7z -m0=bcj -m1=zstd -mx9 %CONDA_ENV_NAME%.tar
 
 artifacts:
-  - path: $(CONDA_ENV_NAME).tar.gz
+  - path: $(CONDA_ENV_NAME).7z
     name: Packed Environment
   - path: package-list.txt
     name: Installed Packages (conda list)
+
+cache:
+  - C:\Program Files\7-Zip\Codecs
