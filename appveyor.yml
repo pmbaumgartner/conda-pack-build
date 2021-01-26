@@ -18,7 +18,7 @@ build_script:
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
     conda pack --n-threads -1
-    --exclude "*.pyc" --exclude "*.pyx" --exclude "*.js.map"
+    --exclude "*.pyc" --exclude "*.pyx"
     --name %CONDA_ENV_NAME%
     --output %CONDA_ENV_NAME%.tar
   - >-

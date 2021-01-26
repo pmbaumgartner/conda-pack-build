@@ -25,6 +25,8 @@ dependencies:
   - altair_viewer
   - altair_saver
   - vega
+  - vega-cli
+  - vega-lite-cli
   # analysis + ML
   - umap-learn
   - pynndescent
