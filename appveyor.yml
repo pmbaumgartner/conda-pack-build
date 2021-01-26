@@ -13,8 +13,9 @@ install:
 build_script:
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
-  - conda update -q conda
-  - conda install -c conda-forge conda-pack mamba python
+  # - conda update -q conda
+  - conda activate base
+  - conda install -c conda-forge conda-pack mamba python==3.7
   - mamba env create -f environment.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
