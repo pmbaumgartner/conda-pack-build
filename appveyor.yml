@@ -5,6 +5,7 @@ environment:
   CONDA_ENV_NAME: conda-pack-build
 
 install:
+  - where 7z
   - set PATH=C:\Miniconda3-x64;C:\Miniconda3-x64\Scripts;%PATH%
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
