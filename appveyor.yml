@@ -25,6 +25,3 @@ artifacts:
     name: Packed Environment
   - path: package-list.txt
     name: Installed Packages (conda list)
-
-cache:
-  - C:\Program Files\7-Zip\Codecs
