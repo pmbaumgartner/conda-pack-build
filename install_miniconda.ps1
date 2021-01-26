@@ -60,18 +60,3 @@ $exePath = "$env:TEMP\Miniconda3-py37_4.9.2-Windows-x86_64.exe"
 Write-Host "Installing..."
 cmd /c start /wait $exePath /InstallationType=AllUsers /RegisterPython=0 /AddToPath=0 /S /D=C:\Miniconda37-x64
 Remove-Item $exePath
-
-
-cmd /c mklink /J C:\Miniconda3-x64 C:\Miniconda37-x64
-
-
-function CheckMiniconda($path) {
-    if (-not (Test-Path "$path\python.exe")) { throw "python.exe is missing in $path"; }
-    elseif (-not (Test-Path "$path\Scripts\conda.exe")) { throw "conda.exe is missing in $path"; }
-    else { Write-Host "$path is OK" -ForegroundColor Green; }
-
-    Start-ProcessWithOutput "$path\python --version"
-    Start-ProcessWithOutput "$path\Scripts\conda --version"
-}
-
-CheckMiniconda 'C:\Miniconda3-x64'
