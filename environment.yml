@@ -23,6 +23,7 @@ dependencies:
   - matplotlib
   - altair
   - altair_viewer
+  - altair_saver
   - vega
   # analysis + ML
   - umap-learn
@@ -31,6 +32,7 @@ dependencies:
   # logging + configuration + admin
   - omegaconf
   - loguru
+  - python-dotenv
   # code quality helpers
   - black
   - flake8
