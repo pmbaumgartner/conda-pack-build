@@ -12,6 +12,8 @@ install:
   - conda install anaconda-clean -y
   - anaconda-clean --yes
   - C:\Miniconda3-x64\Uninstall-Miniconda3.exe /S
+  - ps: Start-FileDownload 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe'
+  - start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
 
 build_script:
   - conda config --set always_yes yes --set changeps1 no --set channel_priority strict
