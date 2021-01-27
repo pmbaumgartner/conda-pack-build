@@ -15,7 +15,8 @@ build_script:
   - conda config --set always_yes yes --set changeps1 no
   - mamba update -q conda
   - mamba install -c conda-forge conda-pack
-  - conda env create -f environment.yml
+  - conda env create -f environment-conda.yml
+  - mamba env update --name %CONDA_ENV_NAME% --file environment-mamba.yml
   - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
     conda pack --n-threads -1
