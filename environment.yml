@@ -6,8 +6,8 @@ channels:
 dependencies:
   - python=3.7
   # pytorch for transformers
-  - pytorch::pytorch
-  - pytorch::cpuonly
+  - pytorch
+  - cpuonly
   # sentence-transformers for embedding
   - sentence-transformers==0.3.9
   # data access / storage
