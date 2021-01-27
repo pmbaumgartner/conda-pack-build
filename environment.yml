@@ -24,6 +24,8 @@ dependencies:
   - altair
   - altair_viewer
   - plotly
+  - holoviews
+  - dash
   # analysis + ML
   - umap-learn
   - pynndescent
