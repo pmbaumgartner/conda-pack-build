@@ -26,6 +26,7 @@ dependencies:
   - plotly
   - holoviews
   - dash
+  - datashader
   # analysis + ML
   - umap-learn
   - pynndescent
