@@ -27,6 +27,7 @@ dependencies:
   - holoviews
   - dash
   - datashader
+  - dash-bootstrap-components
   # analysis + ML
   - umap-learn
   - pynndescent
