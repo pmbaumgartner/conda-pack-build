@@ -1,11 +1,13 @@
-# These are built out due to how mamba handles a deprecated conda feature.
-# Which results in us unable to install pytorch CPU only
-# see: https://github.com/pytorch/builder/pull/488
 name: conda-pack-build
 channels:
+  - pytorch
   - conda-forge
   - defaults
 dependencies:
+  - python=3.7
+  # pytorch for transformers
+  - pytorch
+  - cpuonly
   # sentence-transformers for embedding
   - sentence-transformers==0.3.9
   # data access / storage
