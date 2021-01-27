@@ -23,10 +23,7 @@ dependencies:
   - matplotlib
   - altair
   - altair_viewer
-  - altair_saver
-  - vega
-  - vega-cli
-  - vega-lite-cli
+  - plotly
   # analysis + ML
   - umap-learn
   - pynndescent
