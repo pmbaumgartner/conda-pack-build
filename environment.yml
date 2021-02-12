@@ -36,6 +36,7 @@ dependencies:
   - omegaconf
   - loguru
   - python-dotenv
+  - joblib==0.17.0
   # code quality helpers
   - black
   - flake8
