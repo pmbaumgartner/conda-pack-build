@@ -18,6 +18,8 @@ dependencies:
   - sas7bdat
   - pymssql
   - fastparquet
+  - snappy
+  - python-snappy
   - tabulate
   # visualization
   - matplotlib
