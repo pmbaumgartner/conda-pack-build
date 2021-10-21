@@ -4,9 +4,9 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7
+  - python=3.8
   # pytorch for transformers
-  - pytorch
+  - pytorch==1.7.1
   - cpuonly
   # sentence-transformers for embedding
   - sentence-transformers==2.0.0
@@ -26,15 +26,12 @@ dependencies:
   - altair
   - altair_viewer
   - plotly
-  - holoviews
   - dash
-  - datashader
   - dash-bootstrap-components
   # analysis + ML
   - umap-learn
   - pynndescent
   - hdbscan
-  - spacy
   # logging + configuration + admin
   - omegaconf
   - loguru
