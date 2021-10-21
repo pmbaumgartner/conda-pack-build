@@ -5,6 +5,7 @@ channels:
   - defaults
 dependencies:
   - python=3.8
+  - ipython
   # pytorch for transformers
   - pytorch==1.7.1
   - cpuonly
