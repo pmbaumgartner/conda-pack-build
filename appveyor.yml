@@ -16,7 +16,8 @@ build_script:
   - mamba update -q conda
   - mamba install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - conda list -n %CONDA_ENV_NAME% > package-list.txt
+  - conda run -n %CONDA_ENV_NAME% python -m spacy download en_core_web_md
+  - conda list -n  > package-list.txt
   - >-
     conda pack --n-threads -1
     --exclude "*.pyc" --exclude "*.pyx"
