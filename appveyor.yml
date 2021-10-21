@@ -4,6 +4,7 @@ build: off
 environment:
   CONDA_ENV_NAME: conda-pack-build
   APPVEYOR_CACHE_ENTRY_ZIP_ARGS: -t7z -m0=lzma -mx=5
+  SPACY_MODEL_DOWNLOAD: en_core_web_md
 
 install:
   - set PATH=C:\Miniconda37-x64;C:\Miniconda37-x64\Scripts;C:\Miniconda37-x64\Library\bin;%PATH%
@@ -16,7 +17,6 @@ build_script:
   - mamba update -q conda
   - mamba install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - conda run -n %CONDA_ENV_NAME% python -m spacy download en_core_web_md
   - conda list -n  > package-list.txt
   - >-
     conda pack --n-threads -1
