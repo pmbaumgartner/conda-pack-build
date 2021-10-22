@@ -17,7 +17,7 @@ build_script:
   - mamba update -q conda
   - mamba install -c conda-forge conda-pack
   - conda env create -f environment.yml
-  - conda list -n  > package-list.txt
+  - conda list -n %CONDA_ENV_NAME% > package-list.txt
   - >-
     conda pack --n-threads -1
     --exclude "*.pyc" --exclude "*.pyx"
