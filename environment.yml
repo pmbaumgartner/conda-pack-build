@@ -46,5 +46,5 @@ dependencies:
   - pip
   - pip:
       - pysbd
-      - git+https://github.com/pmbaumgartner/embuddy.git
+      # - git+https://github.com/pmbaumgartner/embuddy.git
       # - onnxruntime
