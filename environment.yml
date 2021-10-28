@@ -35,6 +35,7 @@ dependencies:
   - pynndescent
   - hdbscan
   - snorkel
+  - cleanlab
   # logging + configuration + admin
   - omegaconf
   - loguru
