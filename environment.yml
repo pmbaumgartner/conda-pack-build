@@ -48,5 +48,6 @@ dependencies:
   - pip
   - pip:
       - pysbd
+      - apricot-select
       # - git+https://github.com/pmbaumgartner/embuddy.git
       # - onnxruntime
