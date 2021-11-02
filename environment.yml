@@ -36,6 +36,8 @@ dependencies:
   - hdbscan
   - snorkel
   - cleanlab
+  - scikit-learn
+  - scikit-learn-intelex
   # logging + configuration + admin
   - omegaconf
   - loguru
