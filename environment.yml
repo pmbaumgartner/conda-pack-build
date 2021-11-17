@@ -34,7 +34,7 @@ dependencies:
   - umap-learn
   - pynndescent
   - hdbscan
-  - snorkel
+  - snorkel==0.9.7
   - cleanlab
   - scikit-learn
   - scikit-learn-intelex
